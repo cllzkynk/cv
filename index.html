@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celil Özkaynak - Ansioluettelo</title>
+    <title>Celil Özkaynak - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,535 +21,356 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
-            color: #333;
-            background: #fff;
-            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 950px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
+        /* HEADER */
         .header-wrapper {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 30px;
+            display: flex;
+            gap: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
             margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid #34495e;
-        }
-
-        .header-photo {
-            flex-shrink: 0;
+            align-items: center;
         }
 
         .header-photo img {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 3px solid #34495e;
             object-fit: cover;
+            border: 4px solid var(--bg-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .header-content h1 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
 
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            color: #34495e;
-            font-weight: 700;
+        .header-title {
+            font-size: 1.1em;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        .header-info {
+        .contact-info {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px 20px;
-            font-size: 0.9em;
+            gap: 10px 30px;
+            font-size: 0.95em;
         }
 
-        .header-info-item {
+        .contact-item {
             display: flex;
+            align-items: center;
             gap: 8px;
         }
 
-        .header-info-item strong {
-            color: #34495e;
-            font-weight: 600;
-            min-width: 100px;
-        }
-
-        .header-info-item span {
-            color: #555;
-            word-break: break-word;
-        }
-
-        .header-info-item a {
-            color: #3498db;
+        .contact-item a {
+            color: var(--text-color);
             text-decoration: none;
+            transition: color 0.2s;
         }
 
-        main {
-            padding: 0;
+        .contact-item a:hover {
+            color: var(--accent-color);
         }
 
+        /* SECTIONS */
         section {
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 
         h2 {
-            font-size: 1.1em;
-            color: white;
-            background: #34495e;
-            padding: 10px 15px;
-            margin-bottom: 15px;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 700;
         }
 
-        .section-content {
-            margin-left: 0;
-        }
-
-        .about-text {
-            text-align: justify;
-            line-height: 1.6;
-            color: #555;
-            font-size: 0.95em;
-            margin-bottom: 0;
-        }
-
-        .education-item,
-        .experience-item,
-        .certification-item {
-            margin-bottom: 15px;
-            padding-bottom: 0;
-            border-bottom: none;
+        /* CONTENT ITEMS */
+        .item {
+            margin-bottom: 20px;
         }
 
         .item-header {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 15px;
-            align-items: flex-start;
-            margin-bottom: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
         }
 
         .item-title {
             font-weight: 700;
-            color: #34495e;
-            font-size: 0.95em;
+            font-size: 1.05em;
+            color: var(--primary-color);
         }
 
         .item-date {
-            background: #34495e;
-            color: white;
+            font-size: 0.85em;
+            color: #666;
+            background: #eee;
             padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.75em;
-            white-space: nowrap;
-            flex-shrink: 0;
+            border-radius: 4px;
         }
 
         .item-institution {
-            color: #555;
-            font-size: 0.85em;
-            margin-bottom: 3px;
             font-style: italic;
-        }
-
-        .item-description {
             color: #555;
-            margin-left: 0;
-            font-size: 0.9em;
+            margin-bottom: 8px;
+            display: block;
         }
 
         .item-description ul {
-            margin-left: 18px;
-            margin-top: 2px;
+            list-style-position: inside;
+            margin-left: 5px;
         }
 
         .item-description li {
-            margin-bottom: 1px;
-            color: #666;
-            font-size: 0.9em;
+            color: #444;
+            margin-bottom: 4px;
         }
 
+        /* SKILLS GRID */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 20px;
         }
 
-        .skill-category {
-            background: white;
-            padding: 12px;
-            border-left: 3px solid #34495e;
-            border-radius: 0;
-        }
-
-        .skill-category h3 {
-            color: #34495e;
-            margin-bottom: 8px;
-            font-size: 0.9em;
-            font-weight: 700;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .skill-category li {
-            padding: 2px 0;
-            color: #555;
-            font-size: 0.9em;
-        }
-
-        .skill-category li:before {
-            content: "• ";
-            color: #34495e;
-            font-weight: bold;
-            margin-right: 6px;
-        }
-
-        .languages {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .language-item {
-            background: white;
-            padding: 10px;
-            border-left: 3px solid #34495e;
-        }
-
-        .language-item strong {
-            display: block;
-            color: #34495e;
-            margin-bottom: 3px;
-            font-size: 0.9em;
-            font-weight: 700;
-        }
-
-        .language-item span {
-            color: #555;
-            font-size: 0.85em;
-        }
-
-        .other-section {
-            background: white;
-            padding: 12px;
-            border-left: 3px solid #34495e;
-        }
-
-        .other-section ul {
-            margin-left: 18px;
-        }
-
-        .other-section li {
-            margin-bottom: 3px;
-            color: #555;
-            font-size: 0.9em;
-        }
-
-        footer {
-            background: white;
+        .skill-box {
+            background: #f8f9fa;
             padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-box h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .skill-box ul {
+            list-style: none;
+        }
+
+        .skill-box li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .skill-box li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* FOOTER */
+        footer {
             text-align: center;
-            color: #999;
             font-size: 0.8em;
-            border-top: 1px solid #ddd;
-            margin-top: 20px;
+            color: #888;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
 
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-
-            .container {
-                max-width: 100%;
-            }
-
-            header {
-                page-break-after: avoid;
-            }
-
-            h2 {
-                background: #34495e !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color: white !important;
-                page-break-after: avoid;
-            }
-
-            section {
-                page-break-inside: avoid;
-            }
-
-            .education-item,
-            .experience-item,
-            .certification-item {
-                page-break-inside: avoid;
-            }
-
-            .skill-category {
-                border-left-color: #34495e !important;
-            }
-
-            .language-item {
-                border-left-color: #34495e !important;
-            }
-
-            .other-section {
-                border-left-color: #34495e !important;
-            }
-        }
-
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .header-wrapper {
-                grid-template-columns: 1fr;
-                gap: 15px;
+                flex-direction: column;
+                text-align: center;
             }
-
-            .header-photo img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .header-info {
+            .contact-info {
                 grid-template-columns: 1fr;
             }
-
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-
-            .languages {
-                grid-template-columns: repeat(2, 1fr);
+            .item-header {
+                flex-direction: column;
             }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; }
+            .item-date { border: 1px solid #ccc; background: white; }
+            a { text-decoration: none; color: black; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header-wrapper">
+        <header class="header-wrapper">
             <div class="header-photo">
                 <img src="photo.jpg" alt="Celil Özkaynak">
             </div>
             <div class="header-content">
                 <h1>Celil Özkaynak</h1>
-                <div class="header-info">
-                    <div class="header-info-item">
-                        <strong>Syntymävuosi:</strong>
-                        <span>1991</span>
-                    </div>
-                    <div class="header-info-item">
-                        <strong>Kaupunki:</strong>
-                        <span>Vantaa, Suomi</span>
-                    </div>
-                    <div class="header-info-item">
-                        <strong>Sähköposti:</strong>
-                        <a href="mailto:cllzkynk@gmail.com">cllzkynk@gmail.com</a>
-                    </div>
-                    <div class="header-info-item">
-                        <strong>Puhelin:</strong>
-                        <span>+358442483940</span>
-                    </div>
+                <span class="header-title">Matematiikan Aineenopettaja & Kasvatusalan Osaaja</span>
+                
+                <div class="contact-info">
+                    <div class="contact-item">📍 Vantaa, Suomi</div>
+                    <div class="contact-item">📧 <a href="mailto:cllzkynk@gmail.com">cllzkynk@gmail.com</a></div>
+                    <div class="contact-item">📞 +358 44 248 3940</div>
+                    <div class="contact-item">💻 <a href="https://github.com/cllzkynk" target="_blank">github.com/cllzkynk</a></div>
                 </div>
             </div>
-        </div>
+        </header>
 
         <main>
-            <!-- Pätevyys ja Tavoitteet -->
             <section>
-                <h2>Pätevyys ja Tavoitteet</h2>
-                <div class="section-content">
-                    <p class="about-text">
-                        Olen korkeasti koulutettu ja motivoitunut opetusjalan asiantuntija. Minulla on Ylempi korkeakoulututkintoa (OPH:n päätös) pätevyyteen materiaaliiksi opettajan tehtäviin. Turkin lukiokoulutuksessa ja Suomessa vapaaehtoistyönä hankkittu <strong>5 vuoden</strong> työkokemus ja Suomessa suoritetut täydentävät pedagogiset opinnot antavat vahvan pohjan suomalaiseen opetusjärjestelmään siirtymiseen. Etsin kouluvuosatajan, ohjaajan tai aineepettajien sijaisiuuden kaltaisia tehtäviä.
-                    </p>
-                </div>
+                <h2>Profiili</h2>
+                <p>
+                    Olen motivoitunut matematiikan aineenopettaja ja kasvatusalan ammattilainen. Minulla on OPH:n rinnastama ylempi korkeakoulututkinto ja vahva pedagoginen osaaminen. Etsin aktiivisesti kouluavustajan, ohjaajan tai aineenopettajan tehtäviä, joissa voin hyödyntää 5 vuoden opetuskokemustani, IT-taitojani ja suomalaista pedagogista täydennyskoulutustani.
+                </p>
             </section>
 
-            <!-- Koulutus ja Tutkinnot -->
             <section>
-                <h2>Koulutus ja Tutkinnot</h2>
-                <div class="section-content">
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Kasvatus- ja ohjausalan ammattitutkinto (Opiskelija)</span>
-                            <span class="item-date">11/2025 – Tällä hetkellä</span>
-                        </div>
-                        <div class="item-institution">Omnia, Espoo/Vantaa. Osaamisen syventäminen suomalaiseen kasvatusalaan.</div>
+                <h2>Koulutus</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Kasvatus- ja ohjausalan ammattitutkinto (Opiskelija)</span>
+                        <span class="item-date">11/2025 – Nykyinen</span>
                     </div>
-
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Täydentävät pedagogiset opinnot ulkomailla opettajankoulutuksen suorittaneille</span>
-                            <span class="item-date">2025</span>
-                        </div>
-                        <div class="item-institution">Oulun ammattikorkeakoulu (Oamk). Keskeiset teemat: Suomalaisien koulutus järjestelmä ja pedagogiikka.</div>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Matematiikan Opettaja (Ylempi Korkeakoulututkintoa Vastaava)</span>
-                            <span class="item-date">2019</span>
-                        </div>
-                        <div class="item-institution">Gazi Üniversitesi, Turkki. OPH:n rinnastuspäätös: Ylempi korkeakoulututkinto.</div>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Hallintoteteiden Kandidaatti (Julkishallinto)</span>
-                            <span class="item-date">2019</span>
-                        </div>
-                        <div class="item-institution">Anadolu Üniversitesi, Turkki.</div>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Oikeushallinnon (Opintovikko) (Associate Degree)</span>
-                            <span class="item-date">2015</span>
-                        </div>
-                        <div class="item-institution">Anadolu Üniversitesi, Turkki.</div>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="item-header">
-                            <span class="item-title">Kastamonu Göl Anadolu Opettajankoulutuslyseyo</span>
-                            <span class="item-date">2008</span>
-                        </div>
-                        <div class="item-institution">Kastamonu Göl Anadolu Öğretmen Lisesi, Turkki. Pedagoginen lukiopohja.</div>
+                    <span class="item-institution">Omnia, Espoo/Vantaa</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>Osaamisen syventäminen suomalaiseen kasvatusalaan ja koulujärjestelmään.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
 
-            <!-- Työkokemus -->
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Täydentävät pedagogiset opinnot (Opettajankoulutus)</span>
+                        <span class="item-date">2025</span>
+                    </div>
+                    <span class="item-institution">Oulun ammattikorkeakoulu (Oamk)</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>Keskeiset teemat: Suomalainen koulutusjärjestelmä, opetussuunnitelma ja pedagogiikka.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Matematiikan Opettaja (Ylempi Korkeakoulututkinto)</span>
+                        <span class="item-date">2019</span>
+                    </div>
+                    <span class="item-institution">Gazi Üniversitesi, Turkki</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>OPH:n rinnastuspäätös: Ylempi korkeakoulututkinto.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                </section>
+
             <section>
                 <h2>Työkokemus</h2>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <span class="item-title">Koodausopettaja (Vapaaehtoistyö)</span>
-                            <span class="item-date">06/2022 – 06/2024</span>
-                        </div>
-                        <div class="item-institution">FirstBricks (firstbricks.org/), Yhdysvallat (Etätyö)</div>
-                        <div class="item-description">
-                            <ul>
-                                <li>Koodaus- ja ohjelmointiopetus alakoululaisille (peruskoululun 1-6 luokat)</li>
-                                <li>Vahvisti digitaalista pedagogiaa osaamista ja koulun ulkopuolista ohjusta</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <span class="item-title">Matematiikan Opettaja (Lukio/Yläkoulu)</span>
-                            <span class="item-date">06/2018 – 07/2020</span>
-                        </div>
-                        <div class="item-institution">Serdar Eğitim Kurumları, Ankara, Turkki</div>
-                        <div class="item-description">
-                            <ul>
-                                <li>Lukio- ja yläkoululumatematiikan opetus</li>
-                                <li>Opetussuunnitelman mukaisen sisällön suunnittelu ja oppilaiden arviointi</li>
-                            </ul>
-                        </div>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Koodausopettaja (Vapaaehtoistyö)</span>
+                        <span class="item-date">06/2022 – 06/2024</span>
                     </div>
+                    <span class="item-institution">FirstBricks (USA / Etätyö)</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>Koodaus- ja ohjelmointiopetus yli 20 alakoululaiselle (1-6 luokat).</li>
+                            <li>Python-alkeet ja loogisen ajattelun kehittäminen digitaalisilla työkaluilla.</li>
+                            <li>Etäopetuksen pedagoginen suunnittelu ja toteutus.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <span class="item-title">Matematiikan Opettaja (Valmennuskeskus)</span>
-                            <span class="item-date">01/2017 – 11/2017</span>
-                        </div>
-                        <div class="item-institution">Elit IQ Etüt Merkezi, Ankara, Turkki</div>
-                        <div class="item-description">
-                            <ul>
-                                <li>Tukiopetus opiskelijoille kokeisiin valmistautumista varten</li>
-                            </ul>
-                        </div>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Matematiikan Opettaja (Lukio/Yläkoulu)</span>
+                        <span class="item-date">06/2018 – 07/2020</span>
+                    </div>
+                    <span class="item-institution">Serdar Eğitim Kurumları, Ankara</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>Lukio- ja yläkoulumatematiikan opetus ja kokeiden laadinta.</li>
+                            <li>Oppilaiden yksilöllinen tukeminen ja oppimistulosten seuranta.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">Kouluavustajan/Ohjaajan Harjoittelu</span>
+                        <span class="item-date">30.10.2023 – 11.12.2023</span>
+                    </div>
+                    <span class="item-institution">Martinlaakson koulu, Vantaa</span>
+                    <div class="item-description">
+                        <ul>
+                            <li>Tuki koulun arkea ja opetustilanteita.</li>
+                            <li>Syvensi tuntemusta suomalaisesta kouluympäristöstä ja integroi uusia oppijoita.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Kielitaito ja Erityisosaaminen -->
             <section>
-                <h2>Kielitaito ja Erityisosaaminen</h2>
+                <h2>Osaaminen</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-box">
                         <h3>Kielitaito</h3>
                         <ul>
-                            <li>Turkki: Äidinkieli</li>
-                            <li>Suomi: B1 (Hyvä työskentely taso)</li>
-                            <li>Englanti: B1 (Hyvä työskentely taso)</li>
+                            <li><strong>Turkki:</strong> Äidinkieli</li>
+                            <li><strong>Suomi:</strong> B1 (Kehittyy jatkuvasti)</li>
+                            <li><strong>Englanti:</strong> B1 (Hyvä työkieli)</li>
                         </ul>
                     </div>
 
-                    <div class="skill-category">
-                        <h3>Erityisosaaminen</h3>
+                    <div class="skill-box">
+                        <h3>IT & Pedagogiikka</h3>
                         <ul>
-                            <li>Full Stack Web Development (6 kuukautta)</li>
-                            <li>Koodausosaaminen (FirstBricks-työ)</li>
-                            <li>Digitaalisia oppimissympäristöjä (Moodle, Google Classroom)</li>
+                            <li>Full Stack Web Development (HTML, CSS, JS)</li>
+                            <li>Opetusteknologia (Moodle, Google Classroom)</li>
+                            <li>Koodausopetus lapsille</li>
+                            <li>Luovan draaman sertifikaatti (2025)</li>
                             <li>B-luokan ajokortti</li>
                         </ul>
                     </div>
                 </div>
             </section>
-
-            <!-- Työharjoittelu ja Lisäkokemus -->
-            <section>
-                <h2>Työharjoittelu ja Lisäkokemus</h2>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="item-header">
-                            <span class="item-title">Kouluvustajan/Ohjaajan Harjoittelu</span>
-                            <span class="item-date">30.10.2023 – 11.12.2023</span>
-                        </div>
-                        <div class="item-institution">Martinlaakson koulu, Vantaa</div>
-                        <div class="item-description">
-                            <ul>
-                                <li>Tuki koulun arkea ja opetustilantaita</li>
-                                <li>Syvensi tuntemusta suomalaisesta kouluympäristöstä ja integroi uusia oppijoita</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="item-header">
-                            <span class="item-title">Luovan Draaman Sertifikaatti (Harrastekoulutus)</span>
-                            <span class="item-date">2025</span>
-                        </div>
-                        <div class="item-institution">Hämeenkylän koulu, Vantaa. Suomalaisien Fin Polar- ja Kansalaisfoorumi-järjestöjen yhteistyökoulutus.</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Muut Tiedot -->
-            <section>
-                <h2>Muut Tiedot</h2>
-                <div class="other-section">
-                    <ul>
-                        <li><strong>Terveys:</strong> Ei tarttuvia tai kronisia sairauksia</li>
-                        <li><strong>Rikostaustataote:</strong> Suomessa ei rikosrekisterimerkintöjä</li>
-                    </ul>
-                </div>
-            </section>
         </main>
 
         <footer>
-            <p>Viimeksi päivitetty: Joulukuu 2025 | Ansioluettelo optimoitu PDF-tulostusta varten</p>
+            <p>© 2025 Celil Özkaynak</p>
         </footer>
     </div>
 </body>
