@@ -19,7 +19,7 @@
         /* --- PREMIUM WEB-SUUNNITTELUN TYYLIT --- */
         .premium-hero-img {
             border: 10px solid white;
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
             transform: rotate(1.5deg);
             transition: all 0.7s ease;
         }
@@ -47,7 +47,7 @@
             }
 
             body {
-                background-color: #fdfbf7 !important; /* Beigen sävy */
+                background-color: #fdfbf7 !important;
                 color: #1f2937 !important;
                 font-family: 'Plus Jakarta Sans', sans-serif !important;
                 font-size: 11pt !important;
@@ -57,60 +57,56 @@
 
             main {
                 max-width: 100% !important;
-                padding: 1.5cm 2cm !important;
+                padding: 1cm 1.5cm !important;
                 margin: 0 !important;
             }
 
-            /* Ammattimainen otsikko tulostuksessa */
             #hero-wrapper {
                 display: flex !important;
                 flex-direction: row !important;
                 justify-content: space-between !important;
                 align-items: center !important;
-                background: #f1f5f9 !important; /* Kevyt harmaa/sininen */
-                border-bottom: 4px solid #1e3a8a !important; /* Tummansininen */
-                padding: 20pt !important;
-                margin: -1.5cm -2cm 20pt -2cm !important;
+                background: #f1f5f9 !important;
+                border-bottom: 4px solid #1e3a8a !important;
+                padding: 15pt !important;
+                margin: -1cm -1.5cm 15pt -1.5cm !important;
                 position: static !important;
             }
 
             #hero-text { width: 75% !important; text-align: left !important; }
-            #txt-name { font-size: 24pt !important; font-weight: 800 !important; color: #1e3a8a !important; margin: 0 !important; }
-            #txt-title { font-size: 13pt !important; color: #065f46 !important; font-weight: 700 !important; display: block !important; }
-            .contact-print-row { display: block !important; font-size: 10pt !important; margin-top: 8pt !important; color: #4b5563 !important; font-weight: 600 !important; }
-            #hero-image-wrapper { display: block !important; width: 100px !important; }
-            #hero-image-container { width: 100px !important; height: 115px !important; border: 2px solid #1e3a8a !important; border-radius: 4px !important; transform: none !important; box-shadow: none !important; }
+            #txt-name { font-size: 22pt !important; font-weight: 800 !important; color: #1e3a8a !important; margin: 0 !important; }
+            #txt-title { font-size: 12pt !important; color: #065f46 !important; font-weight: 700 !important; display: block !important; }
+            .contact-print-row { display: block !important; font-size: 9pt !important; margin-top: 6pt !important; color: #4b5563 !important; font-weight: 600 !important; }
+            #hero-image-wrapper { display: block !important; width: 90px !important; }
+            #hero-image-container { width: 90px !important; height: 105px !important; border: 2px solid #1e3a8a !important; border-radius: 4px !important; transform: none !important; box-shadow: none !important; }
 
             h3 {
-                font-size: 14pt !important;
+                font-size: 13pt !important;
                 color: #1e3a8a !important;
                 border-bottom: 2px solid #e5e7eb !important;
-                margin-top: 18pt !important;
-                margin-bottom: 10pt !important;
+                margin-top: 15pt !important;
+                margin-bottom: 8pt !important;
                 text-transform: uppercase !important;
                 font-weight: 800 !important;
-                padding-bottom: 3pt !important;
+                padding-bottom: 2pt !important;
                 display: block !important;
                 width: 100% !important;
             }
 
             .grid { display: block !important; }
             .experience-item-print, .education-item-print { margin-bottom: 10pt !important; page-break-inside: avoid; }
-            .item-top-row { display: flex !important; justify-content: space-between !important; font-weight: 800 !important; color: #111 !important; }
-            .item-school-row { color: #065f46 !important; font-weight: 700 !important; font-size: 10.5pt !important; }
             #skills-list { display: flex !important; flex-wrap: wrap !important; gap: 4pt !important; }
             .skill-chip { background: #ecfdf5 !important; color: #065f46 !important; border: 1px solid #d1fae5 !important; padding: 1pt 5pt !important; font-size: 9pt !important; border-radius: 4pt !important; }
-            .lang-item-print { margin-bottom: 5pt !important; display: flex !important; justify-content: space-between !important; border-bottom: 1px dashed #ccc !important; padding-bottom: 1pt !important; }
-            .lang-progress-bg { display: none !important; }
-            #sidebar-section { margin-top: 15pt !important; }
+            .lang-item-print { margin-bottom: 4pt !important; display: flex !important; justify-content: space-between !important; border-bottom: 1px dashed #ccc !important; padding-bottom: 1pt !important; }
+            #sidebar-section { margin-top: 10pt !important; }
             * { box-shadow: none !important; animation: none !important; filter: none !important; transition: none !important; }
         }
     </style>
 </head>
-<body class="bg-white text-slate-900 overflow-x-hidden">
+<body class="bg-white text-slate-900 overflow-x-hidden selection:bg-blue-600 selection:text-white">
 
     <!-- Navigointipalkki -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 print-hidden h-20 transition-all duration-300">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 print-hidden h-16 md:h-20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-end text-slate-800">
             <div class="flex items-center gap-4 md:gap-6">
                 <div class="flex gap-1 bg-slate-100/50 p-1 rounded-2xl border border-slate-200" id="lang-switcher">
@@ -142,7 +138,7 @@
                         <div class="flex flex-col md:flex-row items-center gap-3 text-xl md:text-2xl font-bold text-blue-700 tracking-tight">
                             <span id="txt-title">Laillistettu matematiikan aineenopettaja (AmO)</span>
                             <div class="hidden md:block w-2 h-2 bg-slate-200 rounded-full print-hidden"></div>
-                            <span class="text-slate-400 font-medium text-lg md:text-xl" id="txt-subtitle">Julkishallinnon asiantuntija</span>
+                            <span class="text-slate-400 font-medium text-lg md:text-xl" id="txt-subtitle">Erikoistunut digitaaliseen pedagogiikkaan</span>
                         </div>
                     </div>
 
@@ -153,7 +149,7 @@
                     </div>
 
                     <p class="text-lg md:text-xl text-slate-500 leading-relaxed max-w-xl font-medium border-l-4 border-blue-600 pl-6 py-1 mx-auto lg:mx-0" id="txt-desc">
-                        Olen Suomessa laillistettu matematiikan aineenopettaja (AmO). Olen suorittanut opettajan pedagogiset opinnot (60 op) Oulun ammattikorkeakoulussa.
+                        <!-- JS renders Hakkımda text here -->
                     </p>
 
                     <div class="flex flex-wrap justify-center lg:justify-start gap-3 print-hidden" id="contact-quick">
@@ -179,15 +175,15 @@
             </div>
         </section>
 
-        <!-- CV-VALITSIN -->
+        <!-- CV-VALITSIN (Smart Filtering) -->
         <div class="my-12 text-center print-hidden">
             <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6" id="txt-specialization">Valitse haettava ala:</p>
             <div class="inline-flex flex-wrap justify-center bg-slate-50 p-1.5 rounded-[2.5rem] border border-slate-200 shadow-lg shadow-slate-100" id="type-switcher">
                 <button onclick="setType('edu')" class="type-btn px-6 md:px-8 py-4 rounded-[2rem] text-sm font-black transition-all flex items-center gap-3 bg-blue-700 text-white shadow-xl scale-105" data-type="edu">
-                    <i data-lucide="calculator" class="w-4 h-4"></i> <span id="tab-edu">Matematiikka & Pedagogiikka</span>
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> <span id="tab-edu">Opetus & Pedagogiikka</span>
                 </button>
                 <button onclick="setType('law')" class="type-btn px-6 md:px-8 py-4 rounded-[2rem] text-sm font-black transition-all flex items-center gap-3 text-slate-400 hover:text-slate-800" data-type="law">
-                    <i data-lucide="scale" class="w-4 h-4"></i> <span id="tab-law">Oikeus & Hallinto</span>
+                    <i data-lucide="briefcase" class="w-4 h-4"></i> <span id="tab-law">Hallinto & Oikeus</span>
                 </button>
                 <button onclick="setType('gen')" class="type-btn px-6 md:px-8 py-4 rounded-[2rem] text-sm font-black transition-all flex items-center gap-3 text-slate-400 hover:text-slate-800" data-type="gen">
                     <i data-lucide="layers" class="w-4 h-4"></i> <span id="tab-gen">Koko Profiili</span>
@@ -197,7 +193,8 @@
 
         <!-- SISÄLTÖ -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-12">
-            <div class="lg:col-span-8 space-y-20 text-slate-800">
+            
+            <div class="lg:col-span-8 space-y-20">
                 <!-- Työkokemus -->
                 <section>
                     <div class="flex items-center gap-5 mb-12 group print:mb-4">
@@ -213,19 +210,47 @@
                 <section>
                     <div class="flex items-center gap-5 mb-12 group print:mb-4">
                         <div class="bg-indigo-700 p-4 rounded-2xl text-white shadow-xl print-hidden">
-                            <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+                            <i data-lucide="book-open" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-3xl font-black text-slate-900 tracking-tighter uppercase w-full" id="txt-edu-title">Koulutus</h3>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 print:grid-cols-1 print:gap-4 text-slate-700" id="education-list"></div>
                 </section>
+
+                <!-- Suositukset (References) -->
+                <section id="refs-section">
+                    <div class="flex items-center gap-5 mb-12 group print:mb-4">
+                        <div class="bg-emerald-700 p-4 rounded-2xl text-white shadow-xl print-hidden">
+                            <i data-lucide="quote" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 tracking-tighter uppercase w-full" id="txt-refs-title">Suositukset</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="refs-list">
+                        <!-- JS renders here -->
+                    </div>
+                </section>
             </div>
 
             <!-- Sivupalkki -->
-            <div class="lg:col-span-4 space-y-16 print:space-y-10">
-                <section class="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-xl print:p-0 print:border-none print:shadow-none" id="sidebar-section">
+            <div class="lg:col-span-4 space-y-16 print:space-y-10" id="sidebar-section">
+                <!-- QR Code (Print Friendly) -->
+                <div class="bg-slate-50 rounded-[3rem] p-8 border border-slate-200 text-center flex flex-col items-center print-hidden">
+                    <h4 class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Portfolio QR</h4>
+                    <div class="w-32 h-32 bg-white p-2 rounded-xl border border-slate-100 flex items-center justify-center">
+                         <i data-lucide="qr-code" class="w-24 h-24 text-blue-700 opacity-20"></i>
+                    </div>
+                    <p class="text-[9px] font-bold text-slate-500 mt-4 uppercase">cllzkynk.github.io/cv</p>
+                </div>
+
+                <section class="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-xl print:p-0 print:border-none print:shadow-none">
                     <h3 class="text-xl font-black text-slate-800 mb-8 border-b border-slate-50 pb-4 italic print:text-lg print:mb-4" id="txt-skills">Osaaminen</h3>
                     <div class="flex flex-wrap gap-2.5" id="skills-list"></div>
+                    <div class="mt-8 grid grid-cols-4 gap-4 opacity-40 print-hidden">
+                         <i data-lucide="monitor" class="w-6 h-6" title="Moodle"></i>
+                         <i data-lucide="terminal" class="w-6 h-6" title="Python"></i>
+                         <i data-lucide="code-2" class="w-6 h-6" title="HTML/CSS"></i>
+                         <i data-lucide="cloud" class="w-6 h-6" title="Google Classroom"></i>
+                    </div>
                 </section>
 
                 <section class="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-xl print:p-0 print:border-none print:shadow-none">
@@ -233,6 +258,7 @@
                     <div class="space-y-8 print:space-y-2" id="language-bars"></div>
                 </section>
 
+                <!-- License -->
                 <div class="bg-gradient-to-br from-indigo-900 to-slate-900 p-1 rounded-[3rem] print:p-0 print:bg-none print:shadow-none">
                     <div class="bg-slate-900/50 backdrop-blur-xl rounded-[2.8rem] p-10 text-center text-white print:p-0 print:text-black print:text-left print:bg-transparent">
                         <span class="font-black text-lg tracking-tight uppercase print:text-sm" id="txt-license">B-luokan ajokortti</span>
@@ -250,31 +276,33 @@
     </footer>
 
     <script>
-        // Käännökset ja data
         const translations = {
             fi: {
                 available: "Käytettävissä uusiin haasteisiin", name: "Celil Özkaynak", 
                 title: "Laillistettu matematiikan aineenopettaja (AmO)", 
-                subtitle: "Julkishallinnon asiantuntija",
+                subtitle: "Pedagogiikan & Julkishallinnon asiantuntija",
                 desc: "Olen Suomessa laillistettu matematiikan aineenopettaja (AmO). Olen suorittanut opettajan pedagogiset opinnot (60 op) Oulun ammattikorkeakoulussa. OPH on rinnastanut Gazi-yliopiston tutkintoni ylempään korkeakoulututkintoon (maisteri). Minulla on vahva harrastuneisuus tietotekniikan ja koodauksen parissa.",
-                loc: "Vantaa, Uusimaa", specialization: "Valitse haettava ala:", eduTab: "Matematiikka & Pedagogiikka", lawTab: "Oikeus & Hallinto", genTab: "Koko Profiili",
-                expTitle: "Työkokemus", eduTitle: "Koulutus", skills: "Osaaminen", langTitle: "Kielitaito", license: "B-luokan ajokortti", print: "Tulosta / PDF", internship: "Harjoittelu", watermark: "MATEMATIIKKA"
+                loc: "Vantaa, Uusimaa", specialization: "Valitse haettava ala:", eduTab: "Opetus & Pedagogiikka", lawTab: "Hallinto & Oikeus", genTab: "Koko Profiili",
+                expTitle: "Työkokemus", eduTitle: "Koulutus", skills: "Osaaminen", langTitle: "Kielitaito", license: "B-luokan ajokortti", print: "Tulosta / PDF", internship: "Harjoittelu", watermark: "MATEMATIIKKA",
+                refsTitle: "Suositukset", ophNote: "OPH:n rinnastuspäätös: Ylempi korkeakoulututkinto"
             },
             en: {
                 available: "Available for New Challenges", name: "Celil Özkaynak", 
                 title: "Licensed Mathematics Subject Teacher (AmO)", 
-                subtitle: "Public Administration Specialist",
+                subtitle: "Pedagogy & Public Administration Specialist",
                 desc: "I am a licensed mathematics teacher (AmO) in Finland. I have completed professional pedagogical studies (60 ECTS) at Oulu University of Applied Sciences. The Finnish National Agency for Education (OPH) has recognized my degree from Gazi University as equivalent to a Master's degree. I have a strong interest and expertise in IT and coding.",
-                loc: "Vantaa, Finland", specialization: "Choose Target Field:", eduTab: "Mathematics & Pedagogy", lawTab: "Law & Admin", genTab: "Full Profile",
-                expTitle: "Work Experience", eduTitle: "Education", skills: "Core Competencies", langTitle: "Languages", license: "B-class Driving License", print: "Print / PDF", internship: "Internship", watermark: "MATHEMATICS"
+                loc: "Vantaa, Finland", specialization: "Choose Target Field:", eduTab: "Education & Pedagogy", lawTab: "Admin & Justice", genTab: "Full Profile",
+                expTitle: "Work Experience", eduTitle: "Education", skills: "Core Competencies", langTitle: "Languages", license: "B-class Driving License", print: "Print / PDF", internship: "Internship", watermark: "MATHEMATICS",
+                refsTitle: "References", ophNote: "OPH Decision: Master's Degree Equivalence"
             },
             tr: {
                 available: "Yeni Fırsatlara Açık", name: "Celil Özkaynak", 
                 title: "Lisanslı Matematik Branş Öğretmeni (AmO)", 
-                subtitle: "Kamu Yönetimi Uzmanı",
-                desc: "Finlandiya'da lisanslı matematik branş öğretmeniyim (AmO). Oulu Uygulamalı Bilimler Üniversitesi'nde 60 AKTS'lik pedagojik formasyon eğitimimi tamamladım. OPH, Gazi Üniversitesi diplomamı Yüksek Lisans derecesine denk görmüştür. Bilişim teknolojileri ve kodlama alanında güçlü bir bireysel birikimim mevcut.",
-                loc: "Vantaa, Finlandiya", specialization: "Başvurulacak Alanı Seçin:", eduTab: "Matematik & Pedagoji", lawTab: "Hukuk & Kamu", genTab: "Genel Profil",
-                expTitle: "İş Tecrübesi", eduTitle: "Eğitim", skills: "Uzmanlık Alanları", langTitle: "Diller", license: "B-Sınıfı Ehliyet", print: "Yazdır / PDF", internship: "Staj", watermark: "MATEMATİK"
+                subtitle: "Eğitim & Kamu Yönetimi Uzmanı",
+                desc: "Finlandiya’da yüksek lisans denkliği onaylı matematik öğretmeni. Oulu Uygulamalı Bilimler Üniversitesi'nde 60 AKTS'lik pedagojik formasyon eğitimimi tamamladım. OPH, Gazi Üniversitesi diplomamı Yüksek Lisans derecesine denk görmüştür. Bilişim teknolojileri ve kodlama alanında güçlü bir bireysel birikimim mevcut.",
+                loc: "Vantaa, Finlandiya", specialization: "Başvurulacak Alanı Seçin:", eduTab: "Opetus & Pedagogiikka", lawTab: "Yönetim & Adalet", genTab: "Genel Profil",
+                expTitle: "İş Tecrübesi", eduTitle: "Eğitim", skills: "Uzmanlık Alanları", langTitle: "Diller", license: "B-Sınıfı Ehliyet", print: "Yazdır / PDF", internship: "Staj", watermark: "MATEMATİK",
+                refsTitle: "Referanslar", ophNote: "OPH Denklik: Yüksek Lisans Derecesi"
             }
         };
 
@@ -282,41 +310,85 @@
             { 
                 id: 1, 
                 period: "12/2025", 
-                title: { 
-                    fi: "Ammatillinen opettajankoulutus (AmO, 60 op)", 
-                    en: "Professional Teacher Education (AmO, 60 cr)", 
-                    tr: "Mesleki Pedagojik Formasyon (AmO, 60 AKTS)" 
-                }, 
-                school: { 
-                    fi: "Oulun ammattikorkeakoulu, Suomi", 
-                    en: "Oulu University of Applied Sciences, Finland", 
-                    tr: "Oulu Uygulamalı Bilimler Üni., Finlandiya" 
-                },
+                title: { fi: "Ammatillinen opettajankoulutus (AmO, 60 op)", en: "Professional Teacher Education (AmO, 60 cr)", tr: "Mesleki Pedagojik Formasyon (AmO, 60 AKTS)" }, 
+                school: { fi: "Oulun ammattikorkeakoulu, Suomi", en: "Oulu University of Applied Sciences, Finland", tr: "Oulu Uygulamalı Bilimler Üni., Finlandiya" },
                 desc: {
-                    fi: "Opinnot: Kasvatustiede, Ammatti- ja korkeakoulupedagogiikka (sis. digipedagogiikka, ohjaus, hyvinvointi), Vastuullisuuspedagogiikka (sis. ekososiaalinen sivistys, turvallisuus), Tutkiva ja kehittävä pedagogiikka, Opetusharjoittelu.",
-                    en: "Studies: Educational Science, Vocational and Higher Education Pedagogy (incl. digital pedagogy, guidance), Pedagogical Responsibility (incl. eco-social culture), Research and Development, Teaching Practice.",
-                    tr: "Dersler: Eğitim Bilimleri, Mesleki ve Yükseköğretim Pedagojisi (dijital pedagoji, rehberlik dahil), Sorumluluk Pedagojisi (ekososyal sivilizasyon dahil), Araştırma ve Geliştirme, Öğretmenlik Uygulaması."
+                    fi: "Opinnot: Kasvatustiede, Ammatti- ja korkeakoulupedagogiikka, Digipedagoginen osaaminen, Opetusharjoittelu.",
+                    en: "Studies: Educational Science, Vocational and Higher Education Pedagogy, Digital Pedagogy, Teaching Practice.",
+                    tr: "Çalışmalar: Eğitim Bilimleri, Mesleki ve Yükseköğretim Pedagojisi, Dijital Pedagoji, Öğretmenlik Uygulaması."
                 },
                 type: ['edu', 'gen'] 
             },
-            { id: 2, period: "11/2025 – Nykyinen", title: { fi: "Kasvatus- ja ohjausalan ammattitutkinto", en: "Vocational Qualification in Education and Guidance", tr: "Eğitim ve Rehberlik Mesleki Eğitimi" }, school: { fi: "Omnia, Espoo/Vantaa, Suomi", en: "Omnia, Espoo/Vantaa, Finland", tr: "Omnia, Espoo/Vantaa, Finlandiya" }, type: ['edu', 'gen'] },
-            { id: 3, period: "2008 – 2019", title: { fi: "Matematiikan opettaja (Ylempi korkeakoulututkinto)", en: "Master's in Math Education", tr: "Lise Matematik Öğretmenliği (Y.L. Denkliği)" }, school: { fi: "Gazi-yliopisto, Turkki", en: "Gazi University, Turkey", tr: "Gazi Üniversitesi, Türkiye" }, type: ['edu', 'gen'] },
+            { id: 2, period: "11/2025 – Nykyinen", title: { fi: "Kasvatus- ja ohjausalan ammattitutkinto", en: "Vocational Qualification in Education and Guidance", tr: "Eğitim ve Rehberlik Mesleki Eğitimi" }, school: { fi: "Omnia, Espoo/Vantaa, Suomi", en: "Omnia, Espoo/Vantaa, Finland", tr: "Omnia, Finlandiya" }, type: ['edu', 'gen'] },
+            { 
+                id: 3, 
+                period: "2008 – 2019", 
+                title: { fi: "Matematiikan opettaja (Gazi-yliopisto)", en: "Math Teacher (Gazi University)", tr: "Matematik Öğretmeni (Gazi Üniversitesi)" }, 
+                school: { fi: "Gazi-yliopisto, Turkki", en: "Gazi University, Turkey", tr: "Gazi Üniversitesi, Türkiye" }, 
+                note: true,
+                type: ['edu', 'gen'] 
+            },
             { id: 4, period: "2015 – 2019", title: { fi: "Julkishallinto (Kandidaatti)", en: "Public Admin (Bachelor's)", tr: "Kamu Yönetimi (Lisans)" }, school: { fi: "Anadolu yliopisto, Turkki", en: "Anadolu University, Turkey", tr: "Anadolu Üniversitesi, Türkiye" }, type: ['law', 'gen'] },
             { id: 5, period: "2012 – 2015", title: { fi: "Oikeustiede (Associate Degree)", en: "Justice (Associate Degree)", tr: "Adalet (Önlisans)" }, school: { fi: "Anadolu yliopisto, Turkki", en: "Anadolu University, Turkey", tr: "Anadolu Üniversitesi, Türkiye" }, type: ['law', 'gen'] }
         ];
 
         const experienceData = [
-            { id: 0, period: "09.12.2025 – 18.12.2025", isIntern: true, title: { fi: "Matematiikan opettaja (Aikuisten perusopetus)", en: "Math Teacher (Adult Basic Education)", tr: "Matematik Öğretmeni (Yetişkin Temel Eğitimi)" }, school: { fi: "Omnia, Suomi", en: "Omnia, Finland", tr: "Omnia, Finlandiya" }, desc: { fi: "Opetusharjoittelu aikuisten perusopetuksessa.", en: "Teaching internship in adult basic education.", tr: "Yetişkin temel eğitiminde öğretmenlik stajı." }, type: ['edu', 'gen'] },
-            { id: 1, period: "2022 – 2024", title: { fi: "Koodauksen ja web-suunnittelun opettaja", en: "Coding & Web Design Instructor", tr: "Kodlama ve Web Tasarım Eğitmeni" }, school: { fi: "First Brick Online Academy", en: "First Brick Online Academy", tr: "First Brick Online Akademi" }, type: ['edu', 'gen'] },
-            { id: 3, period: "2023", isIntern: true, title: { fi: "Kouluavustaja / Ohjaaja", en: "School Assistant", tr: "Okul Asistanı / Rehber" }, school: { fi: "Martinlaakson koulu, Vantaa, Suomi", en: "Martinlaakso School, Vantaa, Finland", tr: "Martinlaakso Okulu, Vantaa, Finlandiya" }, type: ['edu', 'gen'] },
+            { 
+                id: 0, 
+                period: "09.12.2025 – 18.12.2025", 
+                isIntern: true, 
+                title: { fi: "Matematiikan opettaja (Opetusharjoittelu)", en: "Mathematics Teacher (Teaching Practice)", tr: "Matematik Öğretmeni (Staj)" }, 
+                school: { fi: "Omnia, Aikuisten perusopetus", en: "Omnia, Adult Basic Education", tr: "Omnia, Yetişkin Eğitimi" }, 
+                desc: { 
+                    fi: "Opettaja-arkeen tutustuminen, integrointi ja pedagoginen tuki suomalaisessa koulujärjestelmässä.", 
+                    en: "Integration into Finnish school life and pedagogical support in adult education.", 
+                    tr: "Finlandiya okul sisteminde öğretmenlik, entegrasyon ve pedagojik destek süreçleri." 
+                }, 
+                type: ['edu', 'gen'] 
+            },
+            { 
+                id: 1, 
+                period: "2022 – 2024", 
+                title: { fi: "Pedagoginen sisällöntuottaja", en: "Pedagogical Content Developer", tr: "Pedagojik İçerik Geliştirici" }, 
+                school: { fi: "First Brick Online Academy", en: "First Brick Online Academy", tr: "First Brick Online Akademi" },
+                desc: {
+                    fi: "Digitaalisen osaamisen kehittäminen 0-12-vuotiaille lapsille pelillistämisen (Gamification) avulla.",
+                    en: "Developed digital competence for the 0-12 age group using Gamification methods.",
+                    tr: "Oyunlaştırma (Gamification) yöntemiyle 0-12 yaş grubuna dijital yetkinlik kazandırma çalışmaları."
+                },
+                type: ['edu', 'gen'] 
+            },
+            { 
+                id: 3, 
+                period: "2023", 
+                isIntern: true, 
+                title: { fi: "Kouluavustaja / Ohjaaja (Harjoittelu)", en: "School Assistant (Internship)", tr: "Okul Asistanı (Staj)" }, 
+                school: { fi: "Martinlaakson koulu, Vantaa", en: "Martinlaakso School, Vantaa", tr: "Martinlaakso Okulu, Vantaa" },
+                desc: {
+                    fi: "Suomalaisen koulun arki, monikulttuuristen oppijoiden integrointi ve opetuksen tuki.",
+                    en: "Gaining experience in Finnish school daily life and multicultural integration processes.",
+                    tr: "Finlandiya okulunun günlük işleyişi ve çok kültürlü öğrencilerin entegrasyon süreçlerinde deneyim."
+                },
+                type: ['edu', 'gen'] 
+            },
             { id: 2, period: "2019 – 2020", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Serdar Koleji, Turkki", en: "Serdar College, Turkey", tr: "Serdar Koleji, Türkiye" }, type: ['edu', 'gen'] },
             { id: 4, period: "2016 – 2017", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Viphayat Akademi, Turkki", en: "Viphayat Academy, Turkey", tr: "Viphayat Akademi, Türkiye" }, type: ['edu', 'gen'] }
+        ];
+
+        const refsData = [
+            { 
+                name: "Martinlaakson koulu", 
+                text: { fi: "Celil osoitti vahvaa pedagogista otetta ja integraatio-osaamista harjoittelunsa aikana.", en: "Celil demonstrated a strong pedagogical approach and integration expertise during his internship.", tr: "Celil stajı boyunca güçlü bir pedagojik yaklaşım ve entegrasyon uzmanlığı sergiledi." } 
+            },
+            { 
+                name: "First Brick Academy", 
+                text: { fi: "Innostava ja teknisesti taitava koodauspedagogiikan kehittäjä.", en: "An inspiring and technically skilled developer of coding pedagogy.", tr: "İlham verici ve teknik olarak yetenekli bir kodlama pedagojisi geliştiricisi." } 
+            }
         ];
 
         let currentLang = 'fi';
         let currentType = 'edu';
 
-        // Turvallinen sisällön asetus
         function safeSet(id, text) {
             const el = document.getElementById(id);
             if (el) el.textContent = text;
@@ -353,6 +425,7 @@
             safeSet('txt-exp-title', t.expTitle); safeSet('txt-edu-title', t.eduTitle);
             safeSet('txt-skills', t.skills); safeSet('txt-lang-title', t.langTitle); safeSet('txt-license', t.license);
             safeSet('txt-print', t.print); safeSet('footer-watermark', t.watermark);
+            safeSet('txt-refs-title', t.refsTitle);
 
             const expList = document.getElementById('experience-list');
             if (expList) {
@@ -374,14 +447,25 @@
                             <i data-lucide="award" class="w-6 h-6 text-amber-500"></i>
                         </div>
                         <h4 class="font-black text-xl text-slate-900 mb-2">${item.title[currentLang]}</h4>
-                        <p class="item-school-row font-black text-blue-700 ${item.desc ? 'mb-4' : ''}">${item.school[currentLang]}</p>
+                        <p class="item-school-row font-black text-blue-700 ${item.desc || item.note ? 'mb-4' : ''}">${item.school[currentLang]}</p>
+                        ${item.note ? `<p class="text-xs font-black text-emerald-700 uppercase tracking-tight mb-3">★ ${t.ophNote}</p>` : ''}
                         ${item.desc ? `<div class="pt-4 border-t border-slate-100"><p class="text-slate-500 text-sm leading-relaxed">${item.desc[currentLang]}</p></div>` : ''}
                     </div>`).join('');
             }
 
+            const refList = document.getElementById('refs-list');
+            if (refList) {
+                refList.innerHTML = refsData.map(item => `
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm italic text-slate-600 text-sm">
+                        "${item.text[currentLang]}"
+                        <p class="mt-4 not-italic font-black text-blue-700 text-xs uppercase tracking-widest">— ${item.name}</p>
+                    </div>
+                `).join('');
+            }
+
             const skillEl = document.getElementById('skills-list');
             if (skillEl) {
-                const skills = ['Pedagogy', 'Mathematics', 'Digital Education', 'Moodle', 'Curriculum Design', 'HTML/CSS', 'JavaScript', 'React', 'Guidance', 'Creative Drama'];
+                const skills = ['Pedagogy', 'Mathematics', 'Gamification', 'Moodle', 'Curriculum Design', 'HTML/CSS', 'Python', 'React', 'Google Classroom', 'Creative Drama'];
                 skillEl.innerHTML = skills.map(s => `<span class="skill-chip px-5 py-2.5 bg-slate-50 text-slate-800 text-[11px] font-black rounded-xl border border-slate-100 uppercase tracking-wider">${s}</span>`).join('');
             }
 
