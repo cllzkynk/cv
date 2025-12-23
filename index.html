@@ -16,196 +16,155 @@
             scroll-behavior: smooth;
         }
 
-        .animate-spin-slow {
-            animation: spin 8s linear infinite;
+        /* --- PREMIUM WEB TASARIM STİLLERİ --- */
+        .premium-hero-img {
+            border: 12px solid white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: rotate(2deg);
+            transition: all 0.7s ease;
         }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .premium-hero-img:hover {
+            transform: rotate(0deg) scale(1.02);
         }
 
         .animate-bounce-slow {
             animation: bounce 3s infinite;
         }
-
         @keyframes bounce {
-            0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
-            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+            0%, 100% { transform: translateY(-5%); }
+            50% { transform: translateY(0); }
         }
 
-        /* --- YAZDIRMA STİLLERİ (Klasik Word CV Formatı) --- */
+        /* --- MODERN YAZDIRMA (PRINT) STİLLERİ --- */
         @media print {
             @page {
                 size: A4;
-                margin: 1.5cm;
+                margin: 0;
             }
 
-            /* Web arayüz öğelerini gizle */
-            nav, footer, .print-hidden, #type-switcher, #lang-switcher, .sparkles-container, i, i[data-lucide] {
+            nav, footer, .print-hidden, #type-switcher, #lang-switcher, .sparkles-container, .hero-bg-shapes {
                 display: none !important;
             }
 
             body {
-                background: white !important;
-                color: black !important;
-                /* Resmiyet için standart serif font */
-                font-family: 'Times New Roman', Times, serif !important;
+                background-color: #fdfbf7 !important; /* Bej Tonu */
+                color: #1f2937 !important;
+                font-family: 'Plus Jakarta Sans', sans-serif !important;
                 font-size: 11pt !important;
-                line-height: 1.4;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             main {
                 max-width: 100% !important;
-                padding: 0 !important;
+                padding: 1.5cm 2cm !important;
                 margin: 0 !important;
             }
 
-            /* Resmi Başlık Yapısı */
+            /* Profesyonel Header */
             #hero-wrapper {
                 display: flex !important;
+                flex-direction: row !important;
                 justify-content: space-between !important;
-                align-items: flex-start !important;
-                padding: 0 0 10pt 0 !important;
-                margin-bottom: 15pt !important;
-                border-bottom: 2px solid black !important;
-                background: transparent !important;
+                align-items: center !important;
+                background: #f1f5f9 !important; /* Hafif Gri/Mavi */
+                border-bottom: 4px solid #1e3a8a !important; /* Koyu Mavi */
+                padding: 20pt !important;
+                margin: -1.5cm -2cm 20pt -2cm !important;
+                position: static !important;
             }
 
-            #hero-text {
-                display: block !important;
-                width: 75% !important;
-                text-align: left !important;
-            }
+            #hero-text { width: 75% !important; text-align: left !important; }
 
             #txt-name {
-                font-size: 22pt !important;
-                font-weight: bold !important;
+                font-size: 26pt !important;
+                font-weight: 800 !important;
+                color: #1e3a8a !important;
                 margin: 0 !important;
-                text-transform: uppercase !important;
-                color: black !important;
             }
 
-            #txt-title, #txt-subtitle {
-                font-size: 12pt !important;
-                color: #000 !important;
-                font-weight: bold !important;
+            #txt-title {
+                font-size: 14pt !important;
+                color: #065f46 !important; /* Koyu Yeşil */
+                font-weight: 700 !important;
                 display: block !important;
             }
-            
-            #txt-subtitle {
-                font-weight: normal !important;
-                font-style: italic !important;
-                color: #333 !important;
-            }
 
-            /* Yazdırma İletişim Satırı */
             .contact-print-row {
                 display: block !important;
-                margin-top: 5pt !important;
                 font-size: 10pt !important;
-                color: #333 !important;
+                margin-top: 8pt !important;
+                color: #4b5563 !important;
+                font-weight: 600 !important;
             }
 
-            #txt-desc {
-                font-size: 10.5pt !important;
-                border-left: none !important;
-                padding-left: 0 !important;
-                margin: 10pt 0 !important;
-                text-align: justify !important;
-                font-style: normal !important;
+            #hero-image-wrapper { display: block !important; width: 100px !important; }
+            #hero-image-container {
+                width: 100px !important; height: 115px !important;
+                border: 2px solid #1e3a8a !important;
+                border-radius: 4px !important;
+                transform: none !important;
+                box-shadow: none !important;
             }
 
             /* Bölüm Başlıkları */
             h3 {
-                font-size: 13pt !important;
-                border-bottom: 1px solid #000 !important;
-                margin-top: 15pt !important;
-                margin-bottom: 8pt !important;
+                font-size: 14pt !important;
+                color: #1e3a8a !important;
+                border-bottom: 2px solid #e5e7eb !important;
+                margin-top: 20pt !important;
+                margin-bottom: 12pt !important;
                 text-transform: uppercase !important;
-                font-weight: bold !important;
+                font-weight: 800 !important;
+                padding-bottom: 4pt !important;
                 display: block !important;
                 width: 100% !important;
             }
 
-            /* Liste Öğeleri */
+            .grid { display: block !important; }
+
             .experience-item-print {
-                margin-bottom: 10pt !important;
+                margin-bottom: 12pt !important;
                 page-break-inside: avoid;
             }
 
             .item-top-row {
                 display: flex !important;
                 justify-content: space-between !important;
-                font-weight: bold !important;
+                font-weight: 800 !important;
+                color: #111 !important;
             }
 
             .item-school-row {
-                font-weight: bold !important;
-                margin-bottom: 2pt !important;
+                color: #065f46 !important;
+                font-weight: 700 !important;
+                font-size: 11pt !important;
             }
 
-            .item-description-print {
-                font-size: 10pt !important;
-                margin-top: 2pt !important;
-                color: #222 !important;
-                text-align: justify !important;
-            }
-
-            /* Becerileri virgüllü listeye çevir */
-            #skills-list {
-                display: block !important;
-            }
+            /* Skill listesini yan yana diz */
+            #skills-list { display: flex !important; flex-wrap: wrap !important; gap: 4pt !important; }
             .skill-chip {
-                display: inline !important;
-                background: none !important;
-                border: none !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                color: black !important;
-                font-size: 10pt !important;
-            }
-            .skill-chip::after {
-                content: ", " !important;
-            }
-            .skill-chip:last-child::after {
-                content: "." !important;
+                background: #ecfdf5 !important; /* Hafif Yeşil */
+                color: #065f46 !important;
+                border: 1px solid #d1fae5 !important;
+                padding: 2pt 6pt !important;
+                font-size: 9pt !important;
+                border-radius: 4pt !important;
             }
 
-            /* Dil listesi sadeleştirme */
             .lang-item-print {
-                margin-bottom: 2pt !important;
+                margin-bottom: 6pt !important;
                 display: flex !important;
                 justify-content: space-between !important;
-                width: 250px !important;
+                border-bottom: 1px dashed #ccc !important;
+                padding-bottom: 2pt !important;
             }
-            .lang-progress-bg {
-                display: none !important;
-            }
-
-            /* Fotoğrafı sağ üstte küçük kare yap */
-            #hero-image-wrapper {
-                display: block !important;
-                width: 100px !important;
-            }
-            #hero-image-container {
-                width: 100px !important;
-                height: 110px !important;
-                border: 1px solid #000 !important;
-                border-radius: 0 !important;
-                margin: 0 !important;
-                box-shadow: none !important;
-                transform: none !important;
-            }
-
-            /* Genel Temizlik */
-            .grid { display: block !important; }
-            * {
-                box-shadow: none !important;
-                animation: none !important;
-                filter: none !important;
-                transition: none !important;
-            }
+            .lang-progress-bg { display: none !important; }
+            
+            #sidebar-section { margin-top: 15pt !important; }
+            
+            /* Temizlik */
+            * { box-shadow: none !important; animation: none !important; filter: none !important; transition: none !important; }
         }
     </style>
 </head>
@@ -220,13 +179,11 @@
             </div>
             
             <div class="flex items-center gap-4 md:gap-6">
-                <!-- Dil Seçici -->
                 <div class="flex gap-1 bg-slate-100/50 p-1 rounded-2xl border border-slate-200" id="lang-switcher">
                     <button onclick="setLang('fi')" class="lang-btn px-4 py-2 rounded-xl text-[11px] font-black transition-all bg-white text-blue-700 shadow-md" data-lang="fi">FI</button>
                     <button onclick="setLang('en')" class="lang-btn px-4 py-2 rounded-xl text-[11px] font-black transition-all text-slate-400 hover:text-slate-600" data-lang="en">EN</button>
                     <button onclick="setLang('tr')" class="lang-btn px-4 py-2 rounded-xl text-[11px] font-black transition-all text-slate-400 hover:text-slate-600" data-lang="tr">TR</button>
                 </div>
-                <!-- Yazdır Butonu -->
                 <button onclick="window.print()" class="hidden md:flex items-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-2xl text-sm font-black hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-slate-200">
                     <i data-lucide="printer" class="w-4 h-4"></i> <span id="txt-print">Tulosta</span>
                 </button>
@@ -236,9 +193,10 @@
 
     <main class="max-w-7xl mx-auto px-6">
         
-        <!-- HERO SECTION -->
+        <!-- PREMIUM HERO SECTION -->
         <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-slate-100" id="hero-wrapper">
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-20 hidden lg:block print-hidden"></div>
+            <!-- Background Shapes (Web only) -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-20 hidden lg:block print-hidden hero-bg-shapes"></div>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10 w-full">
                 <div class="lg:col-span-7 space-y-10 text-center lg:text-left" id="hero-text">
@@ -254,7 +212,7 @@
                         </div>
                     </div>
 
-                    <!-- Yazdırma İletişim Bloğu -->
+                    <!-- Print-only Contact Info -->
                     <div class="contact-print-row hidden">
                         <span id="txt-phone-print">+358 44 248 39 40</span> &nbsp;•&nbsp; 
                         <span id="txt-email-print">cllzkynk@gmail.com</span> &nbsp;•&nbsp; 
@@ -262,38 +220,33 @@
                     </div>
 
                     <p class="text-xl md:text-2xl text-slate-500 leading-relaxed max-w-2xl font-medium border-l-8 border-blue-600 pl-8 py-2 mx-auto lg:mx-0" id="txt-desc">
-                        Olen Suomessa laillistettu matematiikan ja tietotekniikan opettaja. OPH on rinnastanut Gazi-yliopiston tutkintoni ylempään korkeakoulututkintoon.
+                        Olen Suomessa laillistettu matematiikan ve tietotekniikan opettaja. OPH on rinnastanut Gazi-yliopiston tutkintoni ylempään korkeakoulututkintoon (maisteri).
                     </p>
 
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4 print-hidden" id="contact-quick">
-                        <a href="mailto:cllzkynk@gmail.com" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-3xl font-black shadow-2xl hover:bg-blue-700 transition-all hover:-translate-y-1 active:translate-y-0">
+                        <a href="mailto:cllzkynk@gmail.com" class="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-3xl font-black shadow-2xl hover:bg-blue-700 transition-all hover:-translate-y-1">
                             <i data-lucide="mail" class="w-5 h-5"></i> cllzkynk@gmail.com
                         </a>
-                        <a href="tel:+358442483940" class="flex items-center gap-3 bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-3xl font-black shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
+                        <a href="tel:+358442483940" class="flex items-center gap-3 bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-3xl font-black shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
                             <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i> +358 44 248 39 40
                         </a>
                     </div>
 
-                    <div class="flex justify-center lg:justify-start gap-8 text-slate-400 border-t border-slate-100 pt-10 print-hidden">
+                    <div class="flex justify-center lg:justify-start gap-8 text-slate-400 border-t border-slate-100 pt-10 print-hidden" id="loc-info">
                         <div class="flex items-center gap-3 group cursor-default">
                             <i data-lucide="map-pin" class="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform"></i>
                             <span class="font-bold text-slate-600 uppercase tracking-widest text-xs" id="txt-loc">Vantaa, Uusimaa</span>
                         </div>
-                        <div class="flex items-center gap-3 group cursor-default">
-                            <i data-lucide="globe" class="w-6 h-6 text-indigo-500 group-hover:scale-110 transition-transform"></i>
-                            <span class="font-bold text-slate-600 uppercase tracking-widest text-xs" id="txt-region">Vantaa / Helsinki Region</span>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Sağ Taraf Görsel -->
+                <!-- Right Side Image -->
                 <div class="lg:col-span-5 relative group" id="hero-image-wrapper">
-                    <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-[5rem] blur-2xl opacity-20 group-hover:opacity-30 transition-opacity print-hidden"></div>
-                    <div class="relative aspect-square w-full max-w-[500px] mx-auto overflow-hidden rounded-[5rem] shadow-2xl border-[12px] border-white ring-1 ring-slate-100 rotate-2 group-hover:rotate-0 transition-all duration-700" id="hero-image-container">
+                    <div class="relative aspect-square w-full max-w-[500px] mx-auto overflow-hidden rounded-[5rem] premium-hero-img" id="hero-image-container">
                         <img 
                             src="Gemini_Generated_Image_jmorabjmorabjmor.jpg" 
                             alt="Celil Özkaynak" 
-                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                            class="w-full h-full object-cover scale-110"
                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Celil+Ozkaynak&background=1d4ed8&color=fff&size=512&bold=true';"
                         >
                     </div>
@@ -301,17 +254,17 @@
             </div>
         </section>
 
-        <!-- CV SELECTOR -->
+        <!-- CV SELECTOR (Tabs) -->
         <div class="my-16 text-center print-hidden">
             <p class="text-[11px] font-black text-slate-400 uppercase tracking-[0.4em] mb-8" id="txt-specialization">Valitse haettava ala:</p>
             <div class="inline-flex flex-wrap justify-center bg-slate-50 p-2 rounded-[3rem] border border-slate-200 shadow-xl shadow-slate-100" id="type-switcher">
-                <button onclick="setType('edu')" class="type-btn px-6 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 bg-blue-700 text-white shadow-2xl shadow-blue-200 scale-105 ring-[6px] ring-blue-50" data-type="edu">
+                <button onclick="setType('edu')" class="type-btn px-8 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 bg-blue-700 text-white shadow-2xl scale-105" data-type="edu">
                     <i data-lucide="calculator" class="w-5 h-5"></i> <span id="tab-edu">Matematiikka</span>
                 </button>
-                <button onclick="setType('law')" class="type-btn px-6 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 text-slate-400 hover:text-slate-800 hover:bg-white" data-type="law">
+                <button onclick="setType('law')" class="type-btn px-8 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 text-slate-400 hover:text-slate-800" data-type="law">
                     <i data-lucide="scale" class="w-5 h-5"></i> <span id="tab-law">Oikeus & Hallinto</span>
                 </button>
-                <button onclick="setType('gen')" class="type-btn px-6 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 text-slate-400 hover:text-slate-800 hover:bg-white" data-type="gen">
+                <button onclick="setType('gen')" class="type-btn px-8 md:px-10 py-5 rounded-[2.5rem] text-sm font-black transition-all flex items-center gap-4 text-slate-400 hover:text-slate-800" data-type="gen">
                     <i data-lucide="layers" class="w-5 h-5"></i> <span id="tab-gen">Koko Profiili</span>
                 </button>
             </div>
@@ -320,10 +273,13 @@
         <!-- CONTENT GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-12">
             
-            <div class="lg:col-span-8 space-y-20">
+            <div class="lg:col-span-8 space-y-24" id="experience-section">
                 <!-- Experience -->
                 <section>
-                    <div class="flex items-center gap-6 mb-16 print:mb-4">
+                    <div class="flex items-center gap-6 mb-16 group print:mb-4">
+                        <div class="bg-blue-700 p-5 rounded-[2rem] text-white shadow-2xl print-hidden">
+                            <i data-lucide="briefcase" class="w-8 h-8"></i>
+                        </div>
                         <h3 class="text-4xl font-black text-slate-900 tracking-tighter uppercase w-full" id="txt-exp-title">Työkokemus</h3>
                     </div>
                     <div class="space-y-16 print:space-y-6" id="experience-list"></div>
@@ -331,27 +287,29 @@
 
                 <!-- Education -->
                 <section>
-                    <div class="flex items-center gap-6 mb-16 print:mb-4">
+                    <div class="flex items-center gap-6 mb-16 group print:mb-4">
+                        <div class="bg-indigo-700 p-5 rounded-[2rem] text-white shadow-2xl print-hidden">
+                            <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                        </div>
                         <h3 class="text-4xl font-black text-slate-900 tracking-tighter uppercase w-full" id="txt-edu-title">Koulutus</h3>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 print:grid-cols-1" id="education-list"></div>
                 </section>
             </div>
 
+            <!-- Sidebar -->
             <div class="lg:col-span-4 space-y-20 print:space-y-10" id="sidebar-section">
-                <!-- Skills -->
                 <section class="bg-white rounded-[4rem] p-12 border border-slate-100 shadow-2xl print:p-0 print:border-none print:shadow-none">
-                    <h3 class="text-2xl font-black text-slate-800 mb-10 border-b border-slate-50 pb-6 italic print:text-lg print:mb-2" id="txt-skills">Osaaminen</h3>
+                    <h3 class="text-2xl font-black text-slate-800 mb-10 border-b border-slate-50 pb-6 italic print:text-lg print:mb-4" id="txt-skills">Osaaminen</h3>
                     <div class="flex flex-wrap gap-3" id="skills-list"></div>
                 </section>
 
-                <!-- Languages -->
                 <section class="bg-white rounded-[4rem] p-12 border border-slate-100 shadow-2xl print:p-0 print:border-none print:shadow-none">
-                    <h3 class="text-2xl font-black text-slate-800 mb-10 border-b border-slate-50 pb-6 italic print:text-lg print:mb-2" id="txt-lang-title">Kielitaito</h3>
-                    <div class="space-y-10 print:space-y-1" id="language-bars"></div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-10 border-b border-slate-50 pb-6 italic print:text-lg print:mb-4" id="txt-lang-title">Kielitaito</h3>
+                    <div class="space-y-10 print:space-y-2" id="language-bars"></div>
                 </section>
 
-                <!-- Badge -->
+                <!-- License -->
                 <div class="bg-gradient-to-br from-indigo-900 to-slate-900 p-1 rounded-[4rem] print:p-0 print:bg-none print:shadow-none">
                     <div class="bg-slate-900/50 backdrop-blur-xl rounded-[3.8rem] p-12 text-center text-white print:p-0 print:text-black print:text-left print:bg-transparent">
                         <span class="font-black text-xl tracking-tight uppercase print:text-sm" id="txt-license">B-luokan ajokortti</span>
@@ -361,119 +319,61 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 mt-40 pt-32 pb-20 text-white relative overflow-hidden print-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 items-center text-center md:text-left">
-            <div>
-                <h4 class="font-black text-3xl uppercase tracking-tighter italic">Celil<span class="text-blue-500">.</span>ozkaynak</h4>
-                <p class="text-slate-500 font-medium">Matematiikan aineenopettaja & asiantuntija.</p>
-            </div>
-            <div class="flex justify-center gap-10">
-                <i data-lucide="mail"></i> <i data-lucide="linkedin"></i>
-            </div>
-            <div class="text-slate-500 text-right">
-                <p>© 2025 PORTFOLIO • VANTAA, FINLAND</p>
-            </div>
-        </div>
-        <div class="mt-32 text-center opacity-10">
-            <h5 class="text-[10vw] font-black uppercase select-none" id="footer-watermark">MATEMATIIKKA</h5>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h4 class="font-black text-4xl italic mb-10">Celil<span class="text-blue-500">.</span>ozkaynak</h4>
+            <div class="mt-20 opacity-10 font-black text-[12vw] uppercase select-none" id="footer-watermark">MATEMATIIKKA</div>
         </div>
     </footer>
 
     <script>
         const translations = {
             fi: {
-                available: "Käytettävissä uusiin haasteisiin",
-                name: "Celil Özkaynak",
-                title: "Laillistettu matematiikan aineenopettaja (AmO)",
-                subtitle: "Julkishallinnon asiantuntija",
-                desc: "Olen Suomessa laillistettu matematiikan ja tietotekniikan opettaja. OPH on rinnastanut Gazi-yliopiston tutkintoni ylempään korkeakoulututkintoon (maisteri). Oulun ammattikorkeakoulun (Oulu AMK) pedagoginen pätevyys ja Omnian opinnot antavat vahvan pohjan suomalaiseen koulutusjärjestelmään.",
-                loc: "Vantaa, Uusimaa",
-                specialization: "Valitse haettava ala:",
-                eduTab: "Matematiikka",
-                lawTab: "Oikeus & Hallinto",
-                genTab: "Koko Profiili",
-                expTitle: "Työkokemus ja harjoittelut",
-                eduTitle: "Koulutus",
-                skills: "Erityisosaaminen",
-                langTitle: "Kielitaito",
-                license: "B-luokan ajokortti",
-                print: "Tulosta / PDF",
-                internship: "Harjoittelu",
-                watermark: "MATEMATIIKKA"
+                available: "Käytettävissä uusiin haasteisiin", name: "Celil Özkaynak", title: "Laillistettu matematiikan aineenopettaja (AmO)", subtitle: "Julkishallinnon asiantuntija",
+                desc: "Olen Suomessa laillistettu matematiikan ve tietotekniikan opettaja. OPH on rinnastanut Gazi-yliopiston tutkintoni ylempään korkeakoulututkintoon (maisteri).",
+                loc: "Vantaa, Uusimaa", specialization: "Valitse haettava ala:", eduTab: "Matematiikka", lawTab: "Oikeus & Hallinto", genTab: "Koko Profiili",
+                expTitle: "Työkokemus", eduTitle: "Koulutus", skills: "Osaaminen", langTitle: "Kielitaito", license: "B-luokan ajokortti", print: "Tulosta / PDF", internship: "Harjoittelu", watermark: "MATEMATIIKKA"
             },
             en: {
-                available: "Available for New Challenges",
-                name: "Celil Özkaynak",
-                title: "Licensed Mathematics Subject Teacher (AmO)",
-                subtitle: "Public Administration Specialist",
-                desc: "Licensed Mathematics teacher in Finland with a Master's degree equivalent. With pedagogical qualifications from Oulu UAS and ongoing studies at Omnia, I have a deep understanding of the Finnish education system.",
-                loc: "Vantaa, Finland",
-                specialization: "Choose Target Field:",
-                eduTab: "Mathematics",
-                lawTab: "Law & Admin",
-                genTab: "Full Profile",
-                expTitle: "Work Experience & Internships",
-                eduTitle: "Education",
-                contact: "Contact",
-                skills: "Core Competencies",
-                langTitle: "Languages",
-                license: "B-class Driving License",
-                print: "Print / PDF",
-                internship: "Internship",
-                watermark: "MATHEMATICS"
+                available: "Available for New Challenges", name: "Celil Özkaynak", title: "Licensed Mathematics Subject Teacher (AmO)", subtitle: "Public Administration Specialist",
+                desc: "Licensed Mathematics teacher in Finland with a Master's degree equivalent. With pedagogical qualifications from Oulu UAS.",
+                loc: "Vantaa, Finland", specialization: "Choose Target Field:", eduTab: "Mathematics", lawTab: "Law & Admin", genTab: "Full Profile",
+                expTitle: "Work Experience", eduTitle: "Education", skills: "Core Competencies", langTitle: "Languages", license: "B-class Driving License", print: "Print / PDF", internship: "Internship", watermark: "MATHEMATICS"
             },
             tr: {
-                available: "Yeni Fırsatlara Açık",
-                name: "Celil Özkaynak",
-                title: "Lisanslı Matematik Branş Öğretmeni (AmO)",
-                subtitle: "Kamu Yönetimi Uzmanı",
-                desc: "Finlandiya'da matematik branş öğretmenliği lisansına sahip (AmO), yüksek lisans denkliği olan eğitimci. Oulu AMK pedagojik formasyonu ve Omnia eğitimi ile Finlandiya eğitim sistemine tam entegre olmuş bir profil sunuyorum.",
-                loc: "Vantaa, Finlandiya",
-                specialization: "Başvurulacak Alanı Seçin:",
-                eduTab: "Matematik",
-                lawTab: "Hukuk & Kamu",
-                genTab: "Genel Profil",
-                expTitle: "İş Tecrübesi ve Stajlar",
-                eduTitle: "Eğitim",
-                contact: "İletişim Bilgileri",
-                skills: "Uzmanlık Alanları",
-                langTitle: "Diller",
-                license: "B-Sınıfı Ehliyet",
-                print: "Yazdır / PDF",
-                internship: "Staj",
-                watermark: "MATEMATİK"
+                available: "Yeni Fırsatlara Açık", name: "Celil Özkaynak", title: "Lisanslı Matematik Branş Öğretmeni (AmO)", subtitle: "Kamu Yönetimi Uzmanı",
+                desc: "Finlandiya'da matematik branş öğretmenliği lisansına sahip (AmO), yüksek lisans denkliği olan eğitimci.",
+                loc: "Vantaa, Finlandiya", specialization: "Başvurulacak Alanı Seçin:", eduTab: "Matematik", lawTab: "Hukuk & Kamu", genTab: "Genel Profil",
+                expTitle: "İş Tecrübesi", eduTitle: "Eğitim", skills: "Uzmanlık Alanları", langTitle: "Diller", license: "B-Sınıfı Ehliyet", print: "Yazdır / PDF", internship: "Staj", watermark: "MATEMATİK"
             }
         };
 
         const educationData = [
-            { id: 1, period: "12/2025", title: { fi: "Ammatillinen opettajankoulutus (60 op)", en: "Professional Teacher Education", tr: "Pedagojik Formasyon (AmO)" }, school: { fi: "Oulun ammattikorkeakoulu", en: "Oulu University of Applied Sciences", tr: "Oulu Uygulamalı Bilimler Üni." }, type: ['edu', 'gen'] },
-            { id: 2, period: "11/2025 – Nykyinen", title: { fi: "Kasvatus- ja ohjausalan ammattitutkinto", en: "Education Qualification", tr: "Eğitim ve Rehberlik Mesleki Eğitimi" }, school: { fi: "Omnia, Espoo/Vantaa", en: "Omnia, Espoo/Vantaa", tr: "Omnia, Espoo/Vantaa" }, type: ['edu', 'gen'] },
-            { id: 3, period: "2008 – 2019", title: { fi: "Matematiikan opettaja (Ylempi korkeakoulututkinto)", en: "Master's in Math Education", tr: "Lise Matematik Öğretmenliği (Y.L. Denkliği)" }, school: { fi: "Gazi-yliopisto", en: "Gazi University", tr: "Gazi Üniversitesi" }, type: ['edu', 'gen'] },
-            { id: 4, period: "2015 – 2019", title: { fi: "Julkishallinto (Kandidaatti)", en: "Public Admin (Bachelor's)", tr: "Kamu Yönetimi (Lisans)" }, school: { fi: "Anadolun yliopisto", en: "Anadolu University", tr: "Anadolu Üniversitesi" }, type: ['law', 'gen'] },
-            { id: 5, period: "2012 – 2015", title: { fi: "Oikeustiede (Associate Degree)", en: "Justice (Associate Degree)", tr: "Adalet (Önlisans)" }, school: { fi: "Anadolun yliopisto", en: "Anadolu University", tr: "Anadolu Üniversitesi" }, type: ['law', 'gen'] }
+            { id: 1, period: "12/2025", title: { fi: "Ammatillinen opettajankoulutus (60 op)", en: "Professional Teacher Education", tr: "Pedagojik Formasyon (AmO)" }, school: { fi: "Oulun ammattikorkeakoulu, Suomi", en: "Oulu University of Applied Sciences, Finland", tr: "Oulu Uygulamalı Bilimler Üni., Finlandiya" }, type: ['edu', 'gen'] },
+            { id: 2, period: "11/2025 – Nykyinen", title: { fi: "Kasvatus- ja ohjausalan ammattitutkinto", en: "Education Qualification", tr: "Eğitim ve Rehberlik Mesleki Eğitimi" }, school: { fi: "Omnia, Espoo/Vantaa, Suomi", en: "Omnia, Espoo/Vantaa, Finland", tr: "Omnia, Espoo/Vantaa, Finlandiya" }, type: ['edu', 'gen'] },
+            { id: 3, period: "2008 – 2019", title: { fi: "Matematiikan opettaja (Ylempi korkeakoulututkinto)", en: "Master's in Math Education", tr: "Lise Matematik Öğretmenliği (Y.L. Denkliği)" }, school: { fi: "Gazi-yliopisto, Turkki", en: "Gazi University, Turkey", tr: "Gazi Üniversitesi, Türkiye" }, type: ['edu', 'gen'] },
+            { id: 4, period: "2015 – 2019", title: { fi: "Julkishallinto (Kandidaatti)", en: "Public Admin (Bachelor's)", tr: "Kamu Yönetimi (Lisans)" }, school: { fi: "Anadolu yliopisto, Turkki", en: "Anadolu University, Turkey", tr: "Anadolu Üniversitesi, Türkiye" }, type: ['law', 'gen'] },
+            { id: 5, period: "2012 – 2015", title: { fi: "Oikeustiede (Associate Degree)", en: "Justice (Associate Degree)", tr: "Adalet (Önlisans)" }, school: { fi: "Anadolu yliopisto, Turkki", en: "Anadolu University, Turkey", tr: "Anadolu Üniversitesi, Türkiye" }, type: ['law', 'gen'] }
         ];
 
         const experienceData = [
-            { id: 0, period: "09.12.2025 – 18.12.2025", isIntern: true, title: { fi: "Matematiikan opettaja (Aikuisten perusopetus)", en: "Math Teacher (Adult Basic Education)", tr: "Matematik Öğretmeni (Yetişkin Temel Eğitimi)" }, school: { fi: "Omnia, Espoo/Vantaa", en: "Omnia, Espoo/Vantaa", tr: "Omnia, Espoo/Vantaa" }, desc: { fi: "Opetusharjoittelu aikuisten perusopetuksessa.", en: "Teaching internship in adult basic education.", tr: "Yetişkin temel eğitiminde öğretmenlik stajı." }, type: ['edu', 'gen'] },
+            { id: 0, period: "09.12.2025 – 18.12.2025", isIntern: true, title: { fi: "Matematiikan opettaja (Aikuisten perusopetus)", en: "Math Teacher (Adult Basic Education)", tr: "Matematik Öğretmeni (Yetişkin Temel Eğitimi)" }, school: { fi: "Omnia, Suomi", en: "Omnia, Finland", tr: "Omnia, Finlandiya" }, desc: { fi: "Opetusharjoittelu aikuisten perusopetuksessa.", en: "Teaching internship in adult basic education.", tr: "Yetişkin temel eğitiminde öğretmenlik stajı." }, type: ['edu', 'gen'] },
             { id: 1, period: "2022 – 2024", title: { fi: "Koodauksen ja web-suunnittelun opettaja", en: "Coding & Web Design Instructor", tr: "Kodlama ve Web Tasarım Eğitmeni" }, school: { fi: "First Brick Online Academy", en: "First Brick Online Academy", tr: "First Brick Online Akademi" }, type: ['edu', 'gen'] },
-            { id: 3, period: "2023", isIntern: true, title: { fi: "Kouluavustaja / Ohjaaja", en: "School Assistant", tr: "Okul Asistanı / Rehber" }, school: { fi: "Martinlaakson koulu, Vantaa", en: "Martinlaakso School, Vantaa", tr: "Martinlaakso Okulu, Vantaa" }, type: ['edu', 'gen'] },
-            { id: 2, period: "2019 – 2020", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Serdar Koleji", en: "Serdar College", tr: "Serdar Koleji" }, type: ['edu', 'gen'] },
-            { id: 4, period: "2016 – 2017", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Viphayat Akademi", en: "Viphayat Academy", tr: "Viphayat Akademi" }, type: ['edu', 'gen'] }
+            { id: 3, period: "2023", isIntern: true, title: { fi: "Kouluavustaja / Ohjaaja", en: "School Assistant", tr: "Okul Asistanı / Rehber" }, school: { fi: "Martinlaakson koulu, Vantaa, Suomi", en: "Martinlaakso School, Vantaa, Finland", tr: "Martinlaakso Okulu, Vantaa, Finlandiya" }, type: ['edu', 'gen'] },
+            { id: 2, period: "2019 – 2020", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Serdar Koleji, Turkki", en: "Serdar College, Turkey", tr: "Serdar Koleji, Türkiye" }, type: ['edu', 'gen'] },
+            { id: 4, period: "2016 – 2017", title: { fi: "Matematiikan opettaja", en: "Mathematics Teacher", tr: "Matematik Öğretmeni" }, school: { fi: "Viphayat Akademi, Turkki", en: "Viphayat Academy, Turkey", tr: "Viphayat Akademi, Türkiye" }, type: ['edu', 'gen'] }
         ];
 
         let currentLang = 'fi';
         let currentType = 'edu';
 
-        // Güvenli element güncelleme fonksiyonu
         function safeSet(id, text) {
             const el = document.getElementById(id);
             if (el) el.textContent = text;
         }
 
         function setLang(lang) {
-            currentLang = lang;
-            render();
+            currentLang = lang; render();
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 const isActive = btn.getAttribute('data-lang') === lang;
                 btn.classList.toggle('bg-white', isActive);
@@ -484,99 +384,61 @@
         }
 
         function setType(type) {
-            currentType = type;
-            render();
+            currentType = type; render();
             document.querySelectorAll('.type-btn').forEach(btn => {
                 const isActive = btn.getAttribute('data-type') === type;
                 btn.classList.toggle('bg-blue-700', isActive);
                 btn.classList.toggle('text-white', isActive);
                 btn.classList.toggle('shadow-2xl', isActive);
                 btn.classList.toggle('scale-105', isActive);
-                btn.classList.toggle('ring-[6px]', isActive);
                 btn.classList.toggle('text-slate-400', !isActive);
             });
         }
 
         function render() {
             const t = translations[currentLang];
-            
-            safeSet('txt-available', t.available);
-            safeSet('txt-name', t.name);
-            safeSet('txt-title', t.title);
-            safeSet('txt-subtitle', t.subtitle);
-            safeSet('txt-desc', t.desc);
-            safeSet('txt-loc', t.loc);
-            safeSet('txt-loc-print', t.loc);
-            safeSet('txt-specialization', t.specialization);
-            safeSet('tab-edu', t.eduTab);
-            safeSet('tab-law', t.lawTab);
-            safeSet('tab-gen', t.genTab);
-            safeSet('txt-exp-title', t.expTitle);
-            safeSet('txt-edu-title', t.eduTitle);
-            safeSet('txt-contact', t.contact);
-            safeSet('txt-skills', t.skills);
-            safeSet('txt-lang-title', t.langTitle);
-            safeSet('txt-license', t.license);
-            safeSet('txt-print', t.print);
-            safeSet('footer-watermark', t.watermark);
+            safeSet('txt-available', t.available); safeSet('txt-name', t.name); safeSet('txt-title', t.title); safeSet('txt-subtitle', t.subtitle);
+            safeSet('txt-desc', t.desc); safeSet('txt-loc', t.loc); safeSet('txt-loc-print', t.loc); safeSet('txt-specialization', t.specialization);
+            safeSet('tab-edu', t.eduTab); safeSet('tab-law', t.lawTab); safeSet('tab-gen', t.genTab);
+            safeSet('txt-exp-title', t.expTitle); safeSet('txt-edu-title', t.eduTitle);
+            safeSet('txt-skills', t.skills); safeSet('txt-lang-title', t.langTitle); safeSet('txt-license', t.license);
+            safeSet('txt-print', t.print); safeSet('footer-watermark', t.watermark);
 
             const expList = document.getElementById('experience-list');
             if (expList) {
-                expList.innerHTML = experienceData
-                    .filter(item => currentType === 'gen' || item.type.includes(currentType))
-                    .map(item => `
-                        <div class="relative pl-12 border-l-4 ${item.isIntern ? 'border-amber-200' : 'border-slate-100'} pb-6 experience-item-print group">
-                            <div class="absolute -left-[18px] top-1 w-8 h-8 rounded-full bg-white border-[6px] ${item.isIntern ? 'border-amber-400' : 'border-slate-200'} group-hover:border-blue-700 transition-all shadow-md print-hidden"></div>
-                            <div class="flex flex-col md:flex-row md:items-start justify-between mb-4 item-top-row">
-                                <h4 class="font-black text-3xl text-slate-900 tracking-tight leading-tight">${item.title[currentLang]}</h4>
-                                <span class="text-xs font-black text-blue-700 bg-blue-50 px-6 py-3 rounded-2xl border border-blue-100 whitespace-nowrap h-fit print:p-0 print:border-none print:bg-transparent print:text-black">${item.period}</span>
-                            </div>
-                            <p class="text-slate-600 font-black mb-4 flex items-center gap-3 text-2xl italic item-school-row">${item.school[currentLang]}</p>
-                            ${item.desc ? `<div class="item-description-print"><p class="text-slate-500 text-lg leading-relaxed">${item.desc[currentLang]}</p></div>` : ''}
-                        </div>
-                    `).join('');
+                expList.innerHTML = experienceData.filter(item => currentType === 'gen' || item.type.includes(currentType)).map(item => `
+                    <div class="experience-item-print relative pl-12 border-l-4 ${item.isIntern ? 'border-amber-200' : 'border-slate-100'} pb-4 group">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-white border-4 ${item.isIntern ? 'border-amber-400' : 'border-slate-200'} group-hover:border-blue-700 transition-all print-hidden"></div>
+                        <div class="item-top-row flex justify-between"><h4>${item.title[currentLang]}</h4> <span class="text-blue-700">${item.period}</span></div>
+                        <p class="item-school-row">${item.school[currentLang]} ${item.isIntern ? '('+t.internship+')' : ''}</p>
+                        ${item.desc ? `<div class="item-description-print mt-2 text-slate-500 font-medium">${item.desc[currentLang]}</div>` : ''}
+                    </div>`).join('');
             }
 
             const eduList = document.getElementById('education-list');
             if (eduList) {
-                eduList.innerHTML = educationData
-                    .filter(item => currentType === 'gen' || item.type.includes(currentType))
-                    .map(item => `
-                        <div class="p-12 bg-slate-50/50 rounded-[4rem] border border-slate-100 education-item-print group">
-                            <div class="flex justify-between items-center mb-10 item-top-row">
-                                <span class="text-[11px] font-black text-slate-400 bg-white px-5 py-2.5 rounded-full border border-slate-100 uppercase tracking-widest print:p-0 print:text-black">${item.period}</span>
-                            </div>
-                            <h4 class="font-black text-2xl text-slate-900 mb-4 leading-tight">${item.title[currentLang]}</h4>
-                            <p class="text-blue-700 font-black text-lg item-school-row">${item.school[currentLang]}</p>
-                        </div>
-                    `).join('');
+                eduList.innerHTML = educationData.filter(item => currentType === 'gen' || item.type.includes(currentType)).map(item => `
+                    <div class="education-item-print p-10 bg-slate-50/50 rounded-[3rem] border border-slate-100 group">
+                        <div class="item-top-row"><span>${item.period}</span></div>
+                        <h4 class="font-black text-2xl text-slate-900 mb-2">${item.title[currentLang]}</h4>
+                        <p class="item-school-row font-black text-blue-700">${item.school[currentLang]}</p>
+                    </div>`).join('');
             }
 
             const skillEl = document.getElementById('skills-list');
             if (skillEl) {
                 const skills = ['Mathematics', 'Pedagogy', 'Moodle', 'HTML/CSS', 'JavaScript', 'React', 'Guidance', 'Public Admin', 'Creative Drama'];
-                skillEl.innerHTML = skills.map(s => `<span class="skill-chip px-6 py-3 bg-slate-50 text-slate-800 text-xs font-black rounded-2xl border border-slate-100 shadow-sm uppercase tracking-wider">${s}</span>`).join('');
+                skillEl.innerHTML = skills.map(s => `<span class="skill-chip px-6 py-3 bg-slate-50 text-slate-800 text-xs font-black rounded-2xl border border-slate-100 uppercase tracking-wider">${s}</span>`).join('');
             }
 
             const langEl = document.getElementById('language-bars');
             if (langEl) {
                 const langs = [{n: 'Turkish', l: 'Native', p: '100%'}, {n: 'Finnish', l: 'B1', p: '60%'}, {n: 'English', l: 'B1', p: '65%'}];
-                langEl.innerHTML = langs.map(l => `
-                    <div class="lang-item-print space-y-4">
-                        <div class="flex justify-between items-center px-1">
-                            <span class="font-black text-slate-800 uppercase tracking-widest text-sm">${l.n}</span>
-                            <span class="text-[11px] font-black text-blue-700 bg-blue-50 px-4 py-1 rounded-full uppercase print:bg-transparent print:text-black">${l.l}</span>
-                        </div>
-                        <div class="lang-progress-bg w-full h-4 bg-slate-100 rounded-full p-1 border border-slate-50 shadow-inner print-hidden">
-                            <div class="h-full bg-blue-700 rounded-full" style="width: ${l.p}"></div>
-                        </div>
-                    </div>
-                `).join('');
+                langEl.innerHTML = langs.map(l => `<div class="lang-item-print space-y-2"><div class="flex justify-between font-black uppercase tracking-widest text-sm"><span>${l.n}</span><span class="lang-level text-blue-700">${l.l}</span></div>
+                        <div class="lang-progress-bg print-hidden h-3 bg-slate-100 rounded-full p-1"><div class="h-full bg-blue-600 rounded-full" style="width:${l.p}"></div></div></div>`).join('');
             }
-
             lucide.createIcons();
         }
-
         window.onload = () => { render(); };
     </script>
 </body>
