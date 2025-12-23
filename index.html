@@ -98,9 +98,9 @@
                 font-weight: 600 !important;
             }
 
-            #hero-image-wrapper { display: block !important; width: 90px !important; }
+            #hero-image-wrapper { display: block !important; width: 100px !important; }
             #hero-image-container {
-                width: 90px !important; height: 105px !important;
+                width: 100px !important; height: 115px !important;
                 border: 2px solid #1e3a8a !important;
                 border-radius: 4px !important;
                 transform: none !important;
@@ -109,7 +109,7 @@
 
             /* Bölüm Başlıkları */
             h3 {
-                font-size: 14pt !important;
+                font-size: 13pt !important;
                 color: #1e3a8a !important;
                 border-bottom: 2px solid #e5e7eb !important;
                 margin-top: 18pt !important;
@@ -173,7 +173,6 @@
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 print-hidden h-20 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
-            <!-- Header logosu isteğe bağlı olarak kaldırıldı, sadece kontroller sağa yaslandı -->
             <div class="flex items-center gap-4 md:gap-6">
                 <div class="flex gap-1 bg-slate-100/50 p-1 rounded-2xl border border-slate-200" id="lang-switcher">
                     <button onclick="setLang('fi')" class="lang-btn px-4 py-2 rounded-xl text-[11px] font-black transition-all bg-white text-blue-700 shadow-md" data-lang="fi">FI</button>
@@ -189,9 +188,8 @@
 
     <main class="max-w-7xl mx-auto px-6">
         
-        <!-- ADJUSTED HERO SECTION -->
+        <!-- HERO SECTION -->
         <section class="relative pt-10 pb-16 md:pt-14 md:pb-20 overflow-hidden border-b border-slate-100" id="hero-wrapper">
-            <!-- Background Shapes (Web only) -->
             <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-20 hidden lg:block print-hidden hero-bg-shapes"></div>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
@@ -202,13 +200,12 @@
                         </div>
                         <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight drop-shadow-sm" id="txt-name">Celil Özkaynak</h1>
                         <div class="flex flex-col md:flex-row items-center gap-3 text-xl md:text-2xl font-bold text-blue-700 tracking-tight">
-                            <span id="txt-title">Laillistettu matematiikan aineenopettaja & Pedagogiikan asiantuntija</span>
+                            <span id="txt-title">Laillistettu matematiikan aineenopettaja (AmO)</span>
                             <div class="hidden md:block w-2 h-2 bg-slate-200 rounded-full print-hidden"></div>
                             <span class="text-slate-400 font-medium text-lg md:text-xl" id="txt-subtitle">Julkishallinnon asiantuntija</span>
                         </div>
                     </div>
 
-                    <!-- Print-only Contact Info -->
                     <div class="contact-print-row hidden">
                         <span id="txt-phone-print">+358 44 248 39 40</span> &nbsp;•&nbsp; 
                         <span id="txt-email-print">cllzkynk@gmail.com</span> &nbsp;•&nbsp; 
@@ -216,7 +213,7 @@
                     </div>
 
                     <p class="text-lg md:text-xl text-slate-500 leading-relaxed max-w-xl font-medium border-l-4 border-blue-600 pl-6 py-1 mx-auto lg:mx-0" id="txt-desc">
-                        Olen Suomessa laillistettu matematiikan ve tietotekniikan opettaja (AmO). OPH on rinnastanut tutkintoni ylempään korkeakoulututkintoon (maisteri).
+                        Olen Suomessa laillistettu matematiikan aineenopettaja (AmO). Minulla on vahva harrastuneisuus ja osaaminen tietotekniikan sekä koodauksen saralla.
                     </p>
 
                     <div class="flex flex-wrap justify-center lg:justify-start gap-3 print-hidden" id="contact-quick">
@@ -229,11 +226,10 @@
                     </div>
                 </div>
 
-                <!-- Right Side Image -->
                 <div class="lg:col-span-5 relative group" id="hero-image-wrapper">
                     <div class="relative aspect-square w-full max-w-[420px] mx-auto overflow-hidden rounded-[4rem] premium-hero-img" id="hero-image-container">
                         <img 
-                            src="photo.jpg" 
+                            src="Gemini_Generated_Image_jmorabjmorabjmor.jpg" 
                             alt="Celil Özkaynak" 
                             class="w-full h-full object-cover scale-110"
                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Celil+Ozkaynak&background=1d4ed8&color=fff&size=512&bold=true';"
@@ -243,7 +239,7 @@
             </div>
         </section>
 
-        <!-- CV SELECTOR (Tabs) -->
+        <!-- CV SELECTOR -->
         <div class="my-12 text-center print-hidden">
             <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-6" id="txt-specialization">Valitse haettava ala:</p>
             <div class="inline-flex flex-wrap justify-center bg-slate-50 p-1.5 rounded-[2.5rem] border border-slate-200 shadow-lg shadow-slate-100" id="type-switcher">
@@ -261,9 +257,7 @@
 
         <!-- CONTENT GRID -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-12">
-            
             <div class="lg:col-span-8 space-y-20">
-                <!-- Experience -->
                 <section>
                     <div class="flex items-center gap-5 mb-12 group print:mb-4">
                         <div class="bg-blue-700 p-4 rounded-2xl text-white shadow-xl print-hidden">
@@ -274,7 +268,6 @@
                     <div class="space-y-14 print:space-y-6" id="experience-list"></div>
                 </section>
 
-                <!-- Education -->
                 <section>
                     <div class="flex items-center gap-5 mb-12 group print:mb-4">
                         <div class="bg-indigo-700 p-4 rounded-2xl text-white shadow-xl print-hidden">
@@ -286,7 +279,6 @@
                 </section>
             </div>
 
-            <!-- Sidebar -->
             <div class="lg:col-span-4 space-y-16 print:space-y-10" id="sidebar-section">
                 <section class="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-xl print:p-0 print:border-none print:shadow-none">
                     <h3 class="text-xl font-black text-slate-800 mb-8 border-b border-slate-50 pb-4 italic print:text-lg print:mb-4" id="txt-skills">Osaaminen</h3>
@@ -298,7 +290,6 @@
                     <div class="space-y-8 print:space-y-2" id="language-bars"></div>
                 </section>
 
-                <!-- License -->
                 <div class="bg-gradient-to-br from-indigo-900 to-slate-900 p-1 rounded-[3rem] print:p-0 print:bg-none print:shadow-none">
                     <div class="bg-slate-900/50 backdrop-blur-xl rounded-[2.8rem] p-10 text-center text-white print:p-0 print:text-black print:text-left print:bg-transparent">
                         <span class="font-black text-lg tracking-tight uppercase print:text-sm" id="txt-license">B-luokan ajokortti</span>
@@ -319,25 +310,25 @@
         const translations = {
             fi: {
                 available: "Käytettävissä uusiin haasteisiin", name: "Celil Özkaynak", 
-                title: "Laillistettu matematiikan aineenopettaja & Pedagogiikan asiantuntija", 
+                title: "Laillistettu matematiikan aineenopettaja (AmO)", 
                 subtitle: "Julkishallinnon asiantuntija",
-                desc: "Olen Suomessa laillistettu matematiikan ve tietotekniikan opettaja (AmO). OPH on rinnastanut tutkintoni ylempään korkeakoulututkintoon (maisteri).",
+                desc: "Olen Suomessa laillistettu matematiikan aineenopettaja (AmO). Minulla on vahva harrastuneisuus ve osaaminen tietotekniikan sekä koodauksen saralla. OPH on rinnastanut tutkintoni ylempään korkeakoulututkintoon (maisteri).",
                 loc: "Vantaa, Uusimaa", specialization: "Valitse haettava ala:", eduTab: "Matematiikka & Pedagogiikka", lawTab: "Oikeus & Hallinto", genTab: "Koko Profiili",
                 expTitle: "Työkokemus", eduTitle: "Koulutus", skills: "Osaaminen", langTitle: "Kielitaito", license: "B-luokan ajokortti", print: "Tulosta / PDF", internship: "Harjoittelu", watermark: "MATEMATIIKKA"
             },
             en: {
                 available: "Available for New Challenges", name: "Celil Özkaynak", 
-                title: "Licensed Mathematics Subject Teacher & Pedagogy Specialist", 
+                title: "Licensed Mathematics Subject Teacher (AmO)", 
                 subtitle: "Public Administration Specialist",
-                desc: "Licensed Mathematics teacher in Finland with a Master's degree equivalent. With pedagogical qualifications from Oulu UAS (AmO).",
+                desc: "Licensed Mathematics subject teacher (AmO) in Finland with a Master's degree equivalent. I have a strong personal interest and expertise in information technology and coding.",
                 loc: "Vantaa, Finland", specialization: "Choose Target Field:", eduTab: "Mathematics & Pedagogy", lawTab: "Law & Admin", genTab: "Full Profile",
                 expTitle: "Work Experience", eduTitle: "Education", skills: "Core Competencies", langTitle: "Languages", license: "B-class Driving License", print: "Print / PDF", internship: "Internship", watermark: "MATHEMATICS"
             },
             tr: {
                 available: "Yeni Fırsatlara Açık", name: "Celil Özkaynak", 
-                title: "Lisanslı Matematik Branş Öğretmeni & Eğitim Uzmanı", 
+                title: "Lisanslı Matematik Branş Öğretmeni (AmO)", 
                 subtitle: "Kamu Yönetimi Uzmanı",
-                desc: "Finlandiya'da matematik branş öğretmenliği lisansına sahip (AmO), yüksek lisans denkliği olan eğitimci ve pedagoji uzmanı.",
+                desc: "Finlandiya'da matematik branş öğretmenliği lisansına sahip (AmO), yüksek lisans denkliği olan eğitimci. Bilgi teknolojileri ve kodlama alanında güçlü bireysel yetkinliğe sahibim.",
                 loc: "Vantaa, Finlandiya", specialization: "Başvurulacak Alanı Seçin:", eduTab: "Matematik & Pedagoji", lawTab: "Hukuk & Kamu", genTab: "Genel Profil",
                 expTitle: "İş Tecrübesi", eduTitle: "Eğitim", skills: "Uzmanlık Alanları", langTitle: "Diller", license: "B-Sınıfı Ehliyet", print: "Yazdır / PDF", internship: "Staj", watermark: "MATEMATİK"
             }
@@ -422,7 +413,7 @@
 
             const skillEl = document.getElementById('skills-list');
             if (skillEl) {
-                const skills = ['Pedagogy', 'Mathematics', 'Digital Education', 'Moodle', 'Curriculum Design', 'HTML/CSS', 'JavaScript', 'React', 'Guidance', 'Creative Drama'];
+                const skills = ['Mathematics', 'Pedagogy', 'Digital Education', 'Moodle', 'Curriculum Design', 'HTML/CSS', 'JavaScript', 'React', 'Guidance', 'Creative Drama'];
                 skillEl.innerHTML = skills.map(s => `<span class="skill-chip px-5 py-2.5 bg-slate-50 text-slate-800 text-[11px] font-black rounded-xl border border-slate-100 uppercase tracking-wider">${s}</span>`).join('');
             }
 
